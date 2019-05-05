@@ -1,1 +1,10 @@
 jupyter
+jupyterlab
+jupyter_contrib_nbextensions
+autopep8
+
+librosa
+pandas
+numpy
+matplotlib
+sklearn
