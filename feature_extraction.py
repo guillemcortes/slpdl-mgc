@@ -8,10 +8,15 @@ We should modify it for future use with other datasets.
 '''
 def read_gui(gui):
     datasets_folder = '/'.join(gui.split('/')[:-1])+'/'
+    '''
     df = pd.read_csv(gui, names=['name','path','genre'])
     df['path'] = df['name'].apply(lambda x: datasets_folder + x)
     df['name'] = df['path'].apply(lambda x: x.split('/')[-1].split('.au')[0])
     df['genre'] = df['name'].apply(lambda x: x.split('.')[0])
+    '''
+    df = pd.read_csv(gui, sep=';')
+    df['path'] = df['name'].apply(lambda x: datasets_folder + x)
+    df['name'] = df['path'].apply(lambda x: x.split('/')[-1].split('.au')[0])
     return df
 
 def create_spectrogram(audiopath):
