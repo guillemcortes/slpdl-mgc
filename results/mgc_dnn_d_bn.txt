@@ -1,1 +1,0 @@
-Test set: Accuracy: 136/200 (68%)
